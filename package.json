@@ -1,0 +1,26 @@
+{
+  "name": "mikuli",
+  "version": "1.0.0",
+  "description": "みんなのsikuli",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitfactory/mikuli.git"
+  },
+  "keywords": [
+    "sikuli"
+  ],
+  "author": "kitfactory@gmail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kitfactory/mikuli/issues"
+  },
+  "homepage": "https://github.com/kitfactory/mikuli#readme",
+  "dependencies": {
+    "@types/electron": "^1.6.10",
+    "bulma": "^0.6.2"
+  }
+}
