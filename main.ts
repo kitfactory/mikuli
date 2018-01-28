@@ -8,15 +8,20 @@ function createWindow() {
 
   let size:Electron.Size = screen.getPrimaryDisplay().workAreaSize;
 
+  let x:number = size.width - 300;
+  let y:number = size.height - 400;
+
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    height: 600,
-    width: 800,
+    height: 400,
+    width: 300,
+    x:x,
+    y:y,
     transparent: true,  // ウィンドウの背景を透過
     frame:       false, // 枠の無いウィンドウ
     resizable:   false, // ウィンドウのリサイズを禁止
     hasShadow:   false, // 残像が残らないようにする(Mac only option)
-    alwaysOnTop: true  // 常に最前面
+    alwaysOnTop: true  // 常に最前面    
   });
 
   // and load the index.html of the app.
@@ -27,7 +32,7 @@ function createWindow() {
   }));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on("closed", () => {
@@ -35,6 +40,9 @@ function createWindow() {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
   });
+
+  let s:number[] = mainWindow.getSize();
+  console.log( "size " + s[0] + "," + s[1] );
 }
 
 // This method will be called when Electron has finished

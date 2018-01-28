@@ -59,3 +59,4 @@ typings/
 
 # add by kitfactory
 package-lock.json
+*.js
